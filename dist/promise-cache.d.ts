@@ -133,7 +133,7 @@ export declare class PromiseCache<T> {
      * @public
      * @member
      */
-    resolver: ((value?: T | PromiseLike<T>) => void) | undefined;
+    resolver: ((value?: T | PromiseLike<T> | undefined) => void) | undefined;
     /**
      * Rejector function of the promise.
      * @property rejector
