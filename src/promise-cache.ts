@@ -201,7 +201,8 @@ export class PromiseCache<T> {
   /**
    * Public constructor
    * @param {string} path Path on which the promise will be cached.
-   * @param {(resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void} callback 
+   * @param {(resolve: (value?: T | PromiseLike<T> | undefined) => void,
+   *  reject: (reason?: any) => void) => void} callback 
    * Executor callback function, as same as promise executor.
    * @param {boolean} isSave Flag indicating if cacher should cache the response.
    */
