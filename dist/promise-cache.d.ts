@@ -133,7 +133,7 @@ export declare class PromiseCache<T> {
      * @public
      * @member
      */
-    resolver: ((value?: T | PromiseLike<T> | undefined) => void) | undefined;
+    resolver: ((value: T | PromiseLike<T>) => void) | undefined;
     /**
      * Rejector function of the promise.
      * @property rejector
@@ -150,7 +150,7 @@ export declare class PromiseCache<T> {
      * Executor callback function, as same as promise executor.
      * @param {boolean} isSave Flag indicating if cacher should cache the response.
      */
-    constructor(path: string, callback: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void, isSave?: boolean);
+    constructor(path: string, callback: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void, isSave?: boolean);
     /**
      * Gets the cached promise, if not cached then returns undefined.
      * @param {string} path

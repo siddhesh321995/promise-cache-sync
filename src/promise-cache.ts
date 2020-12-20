@@ -188,7 +188,7 @@ export class PromiseCache<T> {
    * @public
    * @member
    */
-  resolver: ((value?: T | PromiseLike<T> | undefined) => void) | undefined = void 0;
+  resolver: ((value: T | PromiseLike<T>) => void) | undefined = void 0;
   /**
    * Rejector function of the promise.
    * @property rejector
@@ -206,7 +206,7 @@ export class PromiseCache<T> {
    * Executor callback function, as same as promise executor.
    * @param {boolean} isSave Flag indicating if cacher should cache the response.
    */
-  constructor(path: string, callback: (resolve: (value?: T | PromiseLike<T>) => void,
+  constructor(path: string, callback: (resolve: (value: T | PromiseLike<T>) => void,
     reject: (reason?: any) => void) => void, isSave: boolean = true) {
     this.isComplete = false;
     this.promise = new Promise((res, rej) => {
